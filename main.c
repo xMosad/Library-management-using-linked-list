@@ -120,6 +120,7 @@ void reserve_book(){
             books[choise-1].state = 1 ;
             printf("\n\t\t\t enter the student id you want to reserv this book to ");
             scanf("%i" , & books[choise-1].student_id );
+            if(!(check_id(books[choise-1].student_id))){printf("\n\t\t\t wrong id"); get_back_to_admin();}
             flag = 1 ;
         }
     }
@@ -146,7 +147,7 @@ void make_available(){
         if ( (books[choise-1].state == 0 ) || (choise > 10) ){puts("\t\t\t wrong entry");}
         else {books[choise-1].state = 0 ;
               books[choise-1].student_id  = '\0' ;
-              flag = 1 ; }
+              flag = 1 ;}
     }
     get_back_to_admin();
 }
