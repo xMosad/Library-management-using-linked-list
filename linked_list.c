@@ -3,8 +3,8 @@
 #include <string.h>
 #include "linked_list.h"
 
- User* head = NULL ;
- User* tail = NULL ;
+User* head = NULL ;
+User* tail = NULL ;
 
 // to add a node
 void appendNode(char usern[100] , int Pass, int ID   ){
@@ -22,9 +22,7 @@ void appendNode(char usern[100] , int Pass, int ID   ){
         tail->next=node;
         tail=node;
     }
-
 	}
-
 
 //To print nodes (printing the users when you get in as an admin)
 void printNodes(){
@@ -81,7 +79,6 @@ void edit_node (char old_user[100],char usern[100] , int Pass, int Id ){
 	strcpy(node->username ,usern );
 	node->pass = Pass ;
 	node->id = Id ;
-
 }
 
 

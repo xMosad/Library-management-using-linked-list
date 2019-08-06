@@ -106,7 +106,7 @@ void reserve_book(){
     printf("\t\t\t ________________\n\n");
     while(i < 10 ){
         if(books[i].state == 0 ){
-            printf("\t\t\t %i       |   %s \n" , i+1 ,books[i].name );
+            printf("\t\t\t %i       |  %s \n" , i+1 , books[i].name );
         }
         i++;
     }
@@ -117,10 +117,10 @@ void reserve_book(){
         scanf("%i", & choise);
         if ( (books[choise-1].state == 1) || (choise > 10) ){puts("\t\t\t wrong entry");}
         else {
-            books[choise-1].state = 1 ;
-            printf("\n\t\t\t enter the student id you want to reserv this book to ");
+            printf("\n\t\t\t enter the student id you want to reserve this book to ");
             scanf("%i" , & books[choise-1].student_id );
             if(!(check_id(books[choise-1].student_id))){printf("\n\t\t\t wrong id"); get_back_to_admin();}
+            books[choise-1].state = 1 ;
             flag = 1 ;
         }
     }
